@@ -23,7 +23,7 @@ public class AbilityShopView : AbilityView
 
     private void TryLockItem()
     {
-        if (Ability.IsBuyed)
+        if (Ability.isPurchased)
             Button.interactable = false;
     }
 
@@ -35,8 +35,6 @@ public class AbilityShopView : AbilityView
         Icon.sprite = ability.Icon;
     }
 
-    protected override void OnButtonClick()
-    {
+    protected override void OnButtonClick() =>
         BuyButtonClick?.Invoke(Ability, this);
-    }
 }

@@ -9,6 +9,6 @@ public abstract class AbilityView : MonoBehaviour
     [SerializeField] protected Button Button;
 
     protected Ability Ability;
-
+    
     protected abstract void OnButtonClick();
 }

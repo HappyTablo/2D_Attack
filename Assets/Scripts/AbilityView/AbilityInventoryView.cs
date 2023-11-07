@@ -9,14 +9,9 @@ public class AbilityInventoryView : AbilityView
         Button.onClick.AddListener(OnButtonClick);
     }
 
-    private void OnDisable()
-    {
-        Button.onClick.RemoveListener(OnButtonClick);
-    }
-
     public void RenderAbilityInInventory(Ability ability)
     {
-        this.Ability = ability;
+        Ability = ability;
         Icon.sprite = ability.Icon;
         Label.text = ability.Label;
     }
@@ -24,5 +19,10 @@ public class AbilityInventoryView : AbilityView
     protected override void OnButtonClick()
     {
         ChangedAbility?.Invoke(Ability);
+    }
+
+    private void OnDisable()
+    {
+        Button.onClick.RemoveListener(OnButtonClick);
     }
 }

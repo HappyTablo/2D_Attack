@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DistanceTransition : Transition
@@ -9,11 +7,17 @@ public class DistanceTransition : Transition
 
     private void Start()
     {
-        _distanceRange += Random.Range(-_rangeSpread, _rangeSpread);
+        SetDistanceRange();
     }
+
     private void Update()
     {
+        if(Target == null)
+            return;
         if(Vector2.Distance(transform.position, Target.transform.position) < _distanceRange)
             NeedTransit = true;
     }
+
+    private void SetDistanceRange() =>
+        _distanceRange += Random.Range(-_rangeSpread, _rangeSpread);
 }

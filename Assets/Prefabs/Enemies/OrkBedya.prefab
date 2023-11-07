@@ -133,7 +133,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 10
   _reward: 10
-  _explosionVfx: {fileID: 9157275242026851531, guid: 6a2fce6f4f218e4449b00d3966bd4270, type: 3}
 --- !u!114 &3342924089446249400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _transitions:
   - {fileID: 3342924089446249406}
+  - {fileID: 3342924089446249404}
   _moveSpeed: 3
 --- !u!114 &3342924089446249406
 MonoBehaviour:
@@ -221,7 +221,7 @@ MonoBehaviour:
   _transitions: []
 --- !u!95 &-5376594020563885535
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -238,4 +238,5 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
